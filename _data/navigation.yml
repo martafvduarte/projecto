@@ -1,14 +1,11 @@
 docs_list_title: Navigation
 nav:
 
-- title: Homepage
-  url: /projecto/
-
 - title: About
   url: /projecto/about/
 
 - title: Work
   url: /projecto/work/
 
-- title: Contacts
+- title: Contact
   url: /projecto/contacts/

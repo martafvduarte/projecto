@@ -2,33 +2,39 @@
 layout: default
 ---
 
-<div class="home">
+<div>
   {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
-  {{ content }}
-
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
-
+    <h1>{{ page.title }}</h1>
+  {%- endif -%}  
 </div>
+
+
+<main>
+  <!--Start Greeting-->
+    <section>
+      <div>
+        <h1>Hello, I'm Marta!</h1>
+        <p>As a curious and enthusiastic product designer, I like to put all my energy into building complete digital experiences, identifying problems and finding user centred solutions, all while being surrounded by a great team.</p>
+      </div>
+    </section>
+    <section>
+      <div>
+        {% for casestudies in site.casestudies limit:2 %}
+                <div>
+                    <div>
+                      <img src="{{site.baseurl}}/assets/img/{{ casestudies.featured-image }}" alt="{{ casestudies.featured-image-alt }}" />
+                    </div>
+                    <div>
+                      <a href="{{site.baseurl}}/casestudies/{{casestudies.slug}}/" class="{%if page.url contains casestudies.slug %}current{% endif %}"> 
+                        <h2>{{casestudies.title}}</h2>
+                      </a>
+                      <p>{{casestudies.description}}</p> 
+                      <a href="{{site.baseurl}}/casestudies/{{casestudies.slug}}/" class="{%if page.url contains casestudies.slug %}current{% endif %}">
+                      <p>Read more →</p>
+                      </a>
+                    </div>
+                </div>
+        {% endfor %}
+        </div>
+    </section>
+</main>

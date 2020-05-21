@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<header>
+    <h1>{{ page.title | escape }}</h1>
+</header>
+
+<section>
+    <h1>Product Designer</h1>
+    <p>As a curious and enthusiastic product designer based in Lisbon, I like to put all my energy into building complete digital experiences, identifying problems, finding user centred solutions and present them as functional but beautiful layouts, all while being surrounded by a great team. 
+    </p>
+</section>
+
+<section>
+    <div>
+        <h2>Experience</h2>
+    <div>                
+    <div>
+        {% for experience in site.experience reversed %}
+        <h3> {{ experience.name }} </h3>
+        <date> {{ experience.start}} - {{ experience.end }} </date>
+        <p> {{ experience.description }} </p>
+        {% endfor %}
+    </div>
+</section>
+
+<section>
+    <div>
+        <h2>Education</h2>
+    <div>                
+    <div>
+        {% for education in site.education reversed %}
+        <h3> {{ education.course}}, {{education.level }} </h3>
+        <date> {{ education.start}} - {{ education.end }} </date>
+        <p> {{ education.institution }} </p>
+        {% endfor %}
+    </div>
+</section>

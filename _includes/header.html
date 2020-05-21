@@ -1,7 +1,19 @@
-<nav>
-    <ul>
-      {% for item in site.data.navigation.nav %}
-         <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-      {% endfor %}
-   </ul>
+<div>
+   {%- if site.title -%}
+      <a href= "/projecto/" title="Marta Duarte - Product Designer" > {{ site.title | escape }} </a>
+   {%- endif -%}
+</div>
+<div>
+{%- if site.description -%}
+      {{ site.description | escape }}
+   {%- endif -%}
+</div>
+<div>
+   <nav>
+      <ul>
+        {% for item in site.data.navigation.nav %}
+           <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+     </ul>
   </nav>
+</div>
