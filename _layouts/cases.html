@@ -7,14 +7,17 @@ layout: default
 </header>
 
 <section>
-    <div>
-      {% for casestudies in site.casestudies reversed %}
-              <figure>
-                  <a href="{{site.baseurl}}/casestudies/{{casestudies.slug}}/" class="{%if page.url contains casestudies.slug %}current{% endif %}"> 
-                  <img src="{{site.baseurl}}/assets/img/{{ casestudies.featured-image }}" alt="{{ casestudies.featured-image-alt }}" />{{casestudies.title}} 
-                  </a>
-              </figure>
-      {% endfor %}
-      </div>
-  </section>
+  
+  <h2>Explore my work</h2>
+  <div>
+    {% for casestudies in site.casestudies reversed %}
+      <figure>
+        <a href="{{site.baseurl}}/casestudies/{{casestudies.slug}}/" class="{%if page.url contains casestudies.slug %}current{% endif %}"> 
+        <img src="{{site.baseurl}}/assets/img/{{ casestudies.featured-image }}" alt="{{ casestudies.featured-image-alt }}" />{{casestudies.title}} 
+        </a>
+      </figure>
+    {% endfor %}
+  </div>
+
+</section>
   
