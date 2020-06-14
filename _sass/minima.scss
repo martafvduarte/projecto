@@ -1,0 +1,38 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+// Import partials.
+@import
+  "partials/base",
+  "partials/layout",
+  "partials/syntax-highlighting"
+;
+
+
+// Define defaults for each variable.
+
+$base-font-family: 'Poppins', sans-serif !default;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$base-line-height: 1.5 !default;
+
+$table-text-align: left !default;
+
+
+$main-color: #f8ba00 !default;
+$text-color: #242424 !default;
+$background-color: #fdfdfd !default;
+$light-grey: #808080 !default;
+
+
+
+
+
+// Width of the content area
+$content-width:    800px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+
+

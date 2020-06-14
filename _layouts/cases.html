@@ -2,18 +2,17 @@
 layout: default
 ---
 
-<header>
-  <h1>{{ page.title | escape }}</h1>
-</header>
+
 
 <section>
   
-  <h2>Explore my work</h2>
-  <div>
+  <h2 class="page-title">Explore my work</h2>
+  <div class="cases-wrapper">
     {% for casestudies in site.casestudies reversed %}
       <figure>
         <a href="{{site.baseurl}}/casestudies/{{casestudies.slug}}/" class="{%if page.url contains casestudies.slug %}current{% endif %}"> 
-        <img src="{{site.baseurl}}/assets/img/{{ casestudies.featured-image }}" alt="{{ casestudies.featured-image-alt }}" />{{casestudies.title}} 
+        <img src="{{site.baseurl}}/assets/img/{{ casestudies.featured-image }}" alt="{{ casestudies.featured-image-alt }}" />
+        <h3>{{casestudies.title}} →</h3>
         </a>
       </figure>
     {% endfor %}

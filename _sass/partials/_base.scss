@@ -1,0 +1,58 @@
+/**
+ * Reset some basic elements
+ */
+ body, h1, h2, h3, h4, h5, h6,
+ p, blockquote, pre, hr,
+ dl, dd, ol, ul, figure {
+   margin: 0;
+   padding: 0;
+ }
+
+
+ // Define defaults for each variable.
+
+$base-font-family: 'Poppins', sans-serif;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$base-line-height: 1.5 !default;
+
+
+$main-color: #f8ba00 !default;
+$dark-yellow: #eda60e;
+$dark: #242424 !default;
+$white: #ffff;
+$background-color: #fdfdfd !default;
+$light-grey: #808080 !default;
+
+$page-margins: 14% 6% 0% 6%;
+
+@mixin defaultparagraph {
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+  line-height: $base-line-height;
+  color: $dark;
+}
+
+@mixin smalltext {
+  font-size: 12px;
+  font-weight: $base-font-weight;
+  line-height: 14px;
+  color: $dark;
+}
+
+@mixin page-title{
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 400;
+  color: $main-color;
+}
+
+
+
+// Width of the content area
+$content-width:    800px !default;
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+
+

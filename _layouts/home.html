@@ -11,19 +11,19 @@ layout: default
 
   <!--Start Greeting-->
     <section>
-      <div>
+      <div class="greeting">
         <h1>Hello, I'm Marta!</h1>
         <p>As a curious and enthusiastic product designer, I like to put all my energy into building complete digital experiences, identifying problems and finding user centred solutions, all while being surrounded by a great team.</p>
       </div>
     </section>
-    <section>
+    <section class="content-wrapper"> 
       <div>
         {% for casestudies in site.casestudies limit:2 %}
-                <div>
-                    <div>
+                <div class="featured">
+                    <div class= "image-container">
                       <img src="{{site.baseurl}}/assets/img/{{ casestudies.featured-image }}" alt="{{ casestudies.featured-image-alt }}" />
                     </div>
-                    <div>
+                    <div class= "text-container">
                       <a href="{{site.baseurl}}/casestudies/{{casestudies.slug}}/" class="{%if page.url contains casestudies.slug %}current{% endif %}"> 
                         <h2>{{casestudies.title}}</h2>
                       </a>
