@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 
 
 // Import partials.
@@ -27,6 +28,13 @@ main {
   padding: 0% 10% 0% 10%;
 }
 
+img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  display: block;
+}
+
 p {
   @include defaultparagraph;
 }
@@ -36,20 +44,35 @@ h1 {
   font-size: 40px;
   font-weight: 600;
   line-height: 48px;
+  padding-bottom: 20px;
 }
 
 h2 {
   font-size: 28px;
   line-height: 34px;
+  padding-bottom: 10px;
   font-weight: 400;
   color: $dark;
 }
 
 h3 {
-  font-size: 20px;
-  line-height: 26px;
+  font-size: 22px;
+  line-height: 28px;
   font-weight: 400;
+  padding-bottom: 10px;
   color: $dark;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 10px;;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 600;
+  padding-top: 10px;
 }
 
 a {
@@ -64,6 +87,14 @@ a:active {
   color: $dark-yellow;
 }
 
+figcaption {
+  font-size: 12px;
+  font-weight: 16px;
+  text-align: right;
+  color: $light-grey;
+  padding-top: 10px;
+}
+
 .content-wrapper {
   padding: $page-margins;
 }
@@ -71,6 +102,8 @@ a:active {
 .page-title {
   @include page-title;
 }
+
+
 
 /**
  * Header
@@ -150,10 +183,13 @@ a:active {
  */
 
 
- .greeting p {
-  color: grey;
-  font-size: 28px;
-  line-height: 32px;
+ .greeting {
+   padding-bottom: 60px;
+  p {
+    color: grey;
+    font-size: 28px;
+    line-height: 32px;
+  }
 }
 
 .featured {
@@ -164,27 +200,16 @@ align-items: center;
 padding: 0 0 60px 0;
 
   .image-container {
-  width: 100%;
-  height: 100%;
-  min-width: 280px;
+  @include image-container;
   justify-content: space-between;
   box-sizing: border-box;
-    img {
-      max-width: 100%;
-      height: auto;
-      max-height: 100%;
-      display: block;
-    }
   }
 
   &
   .text-container {
     width: 100%;
-    padding: 0 0 0 10%;
+    padding: 0 0 0 5%;
       a {
-        h2 {
-        padding-bottom: 10px;
-        }
         p {
           color: $main-color;
           font-weight: 500;
@@ -216,11 +241,45 @@ flex-wrap: wrap;
     h3 {
       margin-top: 20px;
     }
-    img {
-      max-width: 100%;
-      height: auto;
-      max-height: 100%;
-      display: block;
+  }
+}
+
+
+/**
+* Project Detail
+*/
+
+.top-cases {
+  padding-bottom: 40px;
+  figure {
+    padding: 20px 0;
+  }
+  .details {
+    padding: 20px 0;
+    text-align: right;
+  }
+}
+
+
+.section-wrapper {
+  padding: 20px 0;
+  .block {
+    padding: 20px 0;
+    width: 80%;
+    h2 {
+      color: $main-color;
+    }
+    div {
+      padding: 40px 0 0 80px;
+      ul {
+        list-style: none;
+        padding-left: 40px;
+        p {
+          color: $light-grey;
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
     }
   }
 }
@@ -229,3 +288,42 @@ flex-wrap: wrap;
 
 
 
+
+/**
+* About
+*/
+
+
+.about {
+  padding: 20px 0;
+  h2 {
+    font-weight: 600;
+    color: $main-color;
+  }
+  .block {
+    padding: 10px 0;
+    h3 {
+      font-weight: 600;
+      padding: 5px 0;;
+    }
+    date {
+      color: $light-grey;
+    }
+    p {
+      color: $light-grey;
+    }
+  }
+}
+
+.top-greeting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 80px;
+  figure {
+    @include image-container;
+  }
+  div {
+    padding: 40px;
+  }
+}

@@ -24,6 +24,7 @@ $white: #ffff;
 $background-color: #fdfdfd !default;
 $light-grey: #808080 !default;
 
+
 $page-margins: 14% 6% 0% 6%;
 
 @mixin defaultparagraph {
@@ -46,6 +47,13 @@ $page-margins: 14% 6% 0% 6%;
   font-weight: 400;
   color: $main-color;
 }
+
+@mixin image-container {
+  width: 100%;
+  height: 100%;
+}
+
+
 
 
 
