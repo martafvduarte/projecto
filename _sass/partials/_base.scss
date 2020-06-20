@@ -12,7 +12,7 @@
  // Define defaults for each variable.
 
 $base-font-family: 'Poppins', sans-serif;
-$base-font-size:   16px !default;
+$base-font-size:   14px !default;
 $base-font-weight: 400 !default;
 $base-line-height: 1.5 !default;
 
@@ -25,7 +25,7 @@ $background-color: #fdfdfd !default;
 $light-grey: #808080 !default;
 
 
-$page-margins: 14% 12% 0% 12%;
+$page-margins: 150px 8% 0% 8%;
 
 @mixin defaultparagraph {
   font-size: $base-font-size;
@@ -57,10 +57,24 @@ $page-margins: 14% 12% 0% 12%;
 
 
 
-// Width of the content area
-$content-width:    800px !default;
-$on-palm:          600px !default;
-$on-laptop:        800px !default;
+/**
+* VARiÁVEIS DESKTOP
+*/
 
 
 
+  $base-font-size-desktop:   16px !default;
+
+
+  $page-margins-desktop: 14% 12% 0% 12%;
+
+  @mixin defaultparagraph-desktop {
+    font-size: $base-font-size-desktop;
+    font-weight: $base-font-weight;
+    line-height: $base-line-height;
+    color: $dark;
+  }
+
+
+
+  

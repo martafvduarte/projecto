@@ -6,7 +6,7 @@ layout: default
 <div class="content-wrapper">
   <section>
     <h2 class="page-title">Explore my work</h2>
-    <div class="cases-wrapper2">
+    <div class="cases-wrapper">
       {% for casestudies in site.casestudies reversed %}
         <figure>
           <a href="{{site.baseurl}}/casestudies/{{casestudies.slug}}/" class="{%if page.url contains casestudies.slug %}current{% endif %}"> 
