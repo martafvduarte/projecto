@@ -1,23 +1,23 @@
 ---
 layout: default
 ---
-
-<section class="top-cases">
-    <div>
-        <h1> {{page.title}} </h1>
-        <h2> {{page.description}} </h2>
-    </div>
-    <figure>
-        <img src="{{site.baseurl}}/assets/img/{{ page.featured-image }}" alt="{{ page.featured-image-alt }}" />
-    </figure>
-    <div class="details">
-        <p> <strong>Role, </strong>{{page.role}} </p>
-        <p> <strong>Context, </strong> {{page.context}} </p>
-        <p> <strong>Year, </strong> {{page.year}} </p>
-        <p> <strong>Tools, </strong> {{page.tools}} </p>
-    </div>
-</section>
+<div class="content-wrapper">
+    <section class="top-cases">
+        <div>
+            <h1> {{page.title}} </h1>
+            <h2> {{page.description}} </h2>
+        </div>
+        <figure>
+            <img src="{{site.baseurl}}/assets/img/{{ page.featured-image }}" alt="{{ page.featured-image-alt }}" />
+        </figure>
+        <div class="details">
+            <p> <strong>Role, </strong>{{page.role}} </p>
+            <p> <strong>Context, </strong> {{page.context}} </p>
+            <p> <strong>Year, </strong> {{page.year}} </p>
+            <p> <strong>Tools, </strong> {{page.tools}} </p>
+        </div>
+    </section>
 
 {{ content }}
 
-
+</div>

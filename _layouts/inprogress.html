@@ -1,27 +1,30 @@
 ---
 layout: default
 ---
-
-<section>
-    <div>
-        <h1> {{page.title}} </h1>
-        <h2> {{page.description}} </h2>
-    </div>
-    <figure>
-        <img src="{{site.baseurl}}/assets/img/{{ page.featured-image }}" alt="{{ page.featured-image-alt }}" />
-    </figure>
-    <div>
-        <p> <strong>Role, </strong>{{page.role}} </p>
-        <p> <strong>Context, </strong> {{page.context}} </p>
-        <p> <strong>Year, </strong> {{page.year}} </p>
-        <p> <strong>Tools, </strong> {{page.tools}} </p>
-    </div>
-</section>
-<section>
-    <div>
-        <h3> {{page.warning}} </h3>
+<div class="content-wrapper">
+    <section class="top-cases">
         <div>
-            {%- include social.html -%}
+            <h1> {{page.title}} </h1>
+            <h2> {{page.description}} </h2>
         </div>
-    </div>
-</section>
+        <figure>
+            <img src="{{site.baseurl}}/assets/img/{{ page.featured-image }}" alt="{{ page.featured-image-alt }}" />
+        </figure>
+        <div class="details">
+            <p> <strong>Role, </strong>{{page.role}} </p>
+            <p> <strong>Context, </strong> {{page.context}} </p>
+            <p> <strong>Year, </strong> {{page.year}} </p>
+            <p> <strong>Tools, </strong> {{page.tools}} </p>
+        </div>
+    </section>
+    <section class="section-wrapper">
+        <hr>
+        <div  class="social">
+            <h2> {{page.warning}} </h2>
+            <h4> Follow me on social media to keep up with the progress:</h4>
+            <div>
+                {%- include social.html -%}
+            </div>
+        </div>
+    </section>
+</div>

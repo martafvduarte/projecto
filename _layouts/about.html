@@ -1,44 +1,45 @@
 ---
 layout: default
 ---
-
-<section class="top-greeting">
-    <figure>
-        <img src="{{site.baseurl}}/assets/img/marta.jpg" alt="Marta Duarte, Product Designer">
-    </figure>
-    <div>
-        <h1>Marta Duarte</h1>
-        <p>As a curious and enthusiastic product designer based in Lisbon, I like to put all my energy into building complete digital experiences, identifying problems, finding user centred solutions and present them as functional but beautiful layouts, all while being surrounded by a great team. 
-        </p>
-    </div>
-</section>
-
-<section class="about">
-    <div>
-        <h2>Experience</h2>
-    </div>                
-    <div>
-        {% for experience in site.experience reversed %}
-        <div class="block">
-            <date> {{ experience.start}} - {{ experience.end }} </date>
-            <h3> {{ experience.name }} </h3>
-            <p> {{ experience.description }} </p>
+<div class="content-wrapper">
+    <section class="top-greeting">
+        <figure>
+            <img src="{{site.baseurl}}/assets/img/marta.jpg" alt="Marta Duarte, Product Designer">
+        </figure>
+        <div>
+            <h1>Marta Duarte</h1>
+            <p>As a curious and enthusiastic product designer based in Lisbon, I like to put all my energy into building complete digital experiences, identifying problems, finding user centred solutions and present them as functional but beautiful layouts, all while being surrounded by a great team. 
+            </p>
         </div>
-        {% endfor %}
-    </div>
-</section>
+    </section>
 
-<section class="about">
-    <div>
-        <h2>Education</h2>
-    </div>                
-    <div>
-        {% for education in site.education reversed %}
-        <div class="block">
-            <date> {{ education.start}} - {{ education.end }} </date>
-            <h3> {{ education.course}}, {{education.level }} </h3>
-            <p> {{ education.institution }} </p>
+    <section class="about">
+        <div>
+            <h2>Experience</h2>
+        </div>                
+        <div>
+            {% for experience in site.experience reversed %}
+            <div class="block">
+                <date> {{ experience.start}} - {{ experience.end }} </date>
+                <h3> {{ experience.name }} </h3>
+                <p> {{ experience.description }} </p>
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </div>
-</section>
+    </section>
+
+    <section class="about">
+        <div>
+            <h2>Education</h2>
+        </div>                
+        <div>
+            {% for education in site.education reversed %}
+            <div class="block">
+                <date> {{ education.start}} - {{ education.end }} </date>
+                <h3> {{ education.course}}, {{education.level }} </h3>
+                <p> {{ education.institution }} </p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>

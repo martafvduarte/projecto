@@ -10,29 +10,31 @@ layout: default
 
 
   <!--Start Greeting-->
-    <section>
-      <div class="greeting">
-        <h1>Hello, I'm Marta!</h1>
-        <p>As a curious and enthusiastic product designer, I like to put all my energy into building complete digital experiences, identifying problems and finding user centred solutions, all while being surrounded by a great team.</p>
-      </div>
-    </section>
-    <section> 
-      <div>
-        {% for casestudies in site.casestudies limit:2 %}
-                <div class="featured">
-                    <div class= "image-container">
-                      <img src="{{site.baseurl}}/assets/img/{{ casestudies.featured-image }}" alt="{{ casestudies.featured-image-alt }}" />
-                    </div>
-                    <div class= "text-container">
-                      <a href="{{site.baseurl}}/casestudies/{{casestudies.slug}}/" class="{%if page.url contains casestudies.slug %}current{% endif %}"> 
-                        <h2>{{casestudies.title}}</h2>
-                      </a>
-                      <p>{{casestudies.description}}</p> 
-                      <a href="{{site.baseurl}}/casestudies/{{casestudies.slug}}/" class="{%if page.url contains casestudies.slug %}current{% endif %}">
-                      <p>Read more →</p>
-                      </a>
-                    </div>
-                </div>
-        {% endfor %}
+  <div class="content-wrapper">
+  <section>
+    <div class="greeting">
+      <h1>Hello, I'm Marta!</h1>
+      <p>As a curious and enthusiastic product designer, I like to put all my energy into building complete digital experiences, identifying problems and finding user centred solutions, all while being surrounded by a great team.</p>
+    </div>
+  </section>
+  <section> 
+    <div>
+      {% for casestudies in site.casestudies limit:2 %}
+      <div class="featured">
+        <div class= "image-container">
+          <img src="{{site.baseurl}}/assets/img/{{ casestudies.featured-image }}" alt="{{ casestudies.featured-image-alt }}" />
         </div>
-    </section>
+        <div class= "text-container">
+          <a href="{{site.baseurl}}/casestudies/{{casestudies.slug}}/" class="{%if page.url contains casestudies.slug %}current{% endif %}"> 
+            <h2>{{casestudies.title}}</h2>
+          </a>
+          <p>{{casestudies.description}}</p> 
+          <a href="{{site.baseurl}}/casestudies/{{casestudies.slug}}/" class="{%if page.url contains casestudies.slug %}current{% endif %}">
+            <p>Read more →</p>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>  

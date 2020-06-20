@@ -24,15 +24,13 @@
   flex-direction: column;
 }
 
-main {
-  padding: 0% 10% 0% 10%;
-}
 
 img {
   width: 100%;
   height: auto;
   max-height: 100%;
   display: block;
+  padding: 20px 0;
 }
 
 p {
@@ -85,6 +83,16 @@ a:hover {
 
 a:active {
   color: $dark-yellow;
+}
+
+a:visited {
+  color: $dark;
+}
+
+hr {
+  border-color: #f4f4f4;
+  color: #f4f4f4;
+  background-color: #f4f4f4;
 }
 
 figcaption {
@@ -197,12 +205,24 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-padding: 0 0 60px 0;
+padding: 0 0 20px 0;
 
   .image-container {
   @include image-container;
   justify-content: space-between;
   box-sizing: border-box;
+  align-items: center;
+  height: 320px;
+  display: block;
+  overflow: hidden;
+
+    img:hover {
+      -webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+      transition: all 1s ease;
+      transform: scale(1.05);
+    }
   }
 
   &
@@ -245,6 +265,22 @@ flex-wrap: wrap;
 }
 
 
+.cases-wrapper2 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  grid-template-areas: "figure figure";
+  column-gap: 5%;
+    figure {
+      h3 {
+        padding: 20px 0 40px 0;
+      }
+    }
+  }
+  
+
+
 /**
 * Project Detail
 */
@@ -254,12 +290,11 @@ flex-wrap: wrap;
   figure {
     padding: 20px 0;
   }
-  .details {
-    padding: 20px 0;
+  &
+  .details { 
     text-align: right;
   }
 }
-
 
 .section-wrapper {
   padding: 20px 0;
@@ -270,19 +305,50 @@ flex-wrap: wrap;
       color: $main-color;
     }
     div {
-      padding: 40px 0 0 80px;
-      ul {
-        list-style: none;
-        padding-left: 40px;
-        p {
-          color: $light-grey;
-          font-size: 14px;
-          line-height: 18px;
+      padding: 20px 0 0 80px;
+      div {
+        padding: 10px 0 30px 0;
+      }
+    }
+    ul {
+      padding-left: 20px;
+      list-style: square;
+      p {
+        color: $light-grey;
+        font-size: 14px;
+        line-height: 18px;
+        padding: 5px 0;
+      }
+      .personas {
+        display: flex;
+        align-items: center;
+        div {
+          width: 100%;
+          padding-left: 40px;
         }
       }
+      .quotes {
+          padding: 30px 0 20px 40px;
+          list-style: none;
+          q {
+            color: $main-color;
+            font-size: 22px;
+            line-height: 30px;
+          }
+      }
+    }
+    ol {
+      @extend ul;
+      list-style: decimal;
     }
   }
 }
+
+
+.section-wrapper {
+  padding: 20px 0;
+}
+
 
 
 
@@ -301,6 +367,7 @@ flex-wrap: wrap;
     color: $main-color;
   }
   .block {
+    width: 60%;
     padding: 10px 0;
     h3 {
       font-weight: 600;
@@ -327,3 +394,60 @@ flex-wrap: wrap;
     padding: 40px;
   }
 }
+
+
+/**
+* Contacts
+*/
+
+.contacts {
+	display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+}
+
+
+/**
+* Social
+*/
+
+.social {
+  list-style: none;
+  padding-top: 40px;
+  h4 {
+    padding: 40px 0 20px 0;
+  }
+  h3 {
+    padding-bottom: 15px;
+    a {
+      text-decoration: none;
+      color: $light-grey;
+    }
+    a:hover {
+      color: $main-color;
+    }
+  }
+  div {
+    ul {
+      list-style: none;
+      li {
+        padding: 5px 0;
+        a {
+          display: flex;
+          fill: $main-color;
+          
+          div {
+            padding-right: 10px;
+          }
+        }
+        a:hover {
+          color: $main-color;
+          fill: $dark-yellow; 
+        }
+      }
+    }
+  }
+}
+
